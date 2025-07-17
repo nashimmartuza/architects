@@ -9,8 +9,8 @@
 
 /* Universal Style */
 * {
-  /* margin: 0px; */
-  /* padding: 0px; */
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Shared Style */
@@ -43,7 +43,7 @@
   color: #727272;
 }
 
-.btb-prmary {
+.btn-primary {
   background-color: #FF900E;
   color: white;
   font-weight: 600;
@@ -54,12 +54,22 @@
   cursor: pointer;
 }
 
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main section {
+  margin-top: 80px;
+}
+
 /* Header section style */
 .navbar {
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
   align-items: center;
+  padding-top: 25px;
 }
 
 .nav-item {
@@ -90,28 +100,94 @@
 
 .banner-content {
   max-width: 850px;
+
 }
 
 .banner-title {
   font-size: 4rem;
   font-weight: 700;
+  padding-bottom: 24px;
 }
 
 .banner-description {
   font-size: 1rem;
   font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .banner-image {
   width: 100%;
+  padding-bottom: 45px;
 }
+
+/* Feature section style */
+.teams {
+  align-items: center;
+}
+
+.teams-image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.our-feature {
+  margin-left: 73px;
+  max-width: 537px;
+}
+
+.feature-section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+
+#Quick-list {
+  font-weight: 500;
+}
+
+.Features {
+  color: #FF900E;
+}
+
+.feature-section-description {
+  padding-bottom: 30px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 
 /* responsive for small device */
 
 @media screen and (max-width: 576px) {
 
   .navbar,
-  .nav-links {
+  .nav-links,
+  .teams {
     flex-direction: column;
   }
+
+  .teams-image {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-feature {
+    margin: 0;
+    padding: 20px;
+  }
+
+}
+
+/* Medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .our-feature {
+    padding: 20px;
+
+  }
+
+
 }
